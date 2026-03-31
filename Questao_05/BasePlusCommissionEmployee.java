@@ -4,6 +4,13 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
     public BasePlusCommissionEmployee(String firstName, String lastName, String cpf, double grossSales,
             double commissionRate, double baseSalary) {
         super(firstName, lastName, cpf, grossSales, commissionRate);
+        setBaseSalary(baseSalary);
+    }
+
+    public void setBaseSalary(double baseSalary) {
+        if (baseSalary < 0.0) {
+            throw new IllegalArgumentException("Salário base deve ser >= 0.0");
+        }
         this.baseSalary = baseSalary;
     }
 

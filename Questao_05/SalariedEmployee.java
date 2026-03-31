@@ -7,7 +7,10 @@ public class SalariedEmployee extends Employee {
     }
 
     public void setWeeklySalary(double weeklySalary) {
-        this.weeklySalary = weeklySalary < 0 ? 0 : weeklySalary;
+        if (weeklySalary < 0.0) {
+            throw new IllegalArgumentException("Salário semanal deve ser maior ou igual a 0");
+        }
+        this.weeklySalary = weeklySalary;
     }
 
     @Override
