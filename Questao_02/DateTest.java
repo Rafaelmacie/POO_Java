@@ -4,7 +4,7 @@ public class DateTest {
 
         // 1. Teste de Data Válida
         try {
-            Date dataValida = new Date(31, 1, 2024); // Janeiro tem 31 dias
+            Date dataValida = new Date(31, 1, 2024);
             System.out.print("Teste 1 (Data Válida): ");
             dataValida.displayDate();
         } catch (IllegalArgumentException e) {
@@ -13,14 +13,14 @@ public class DateTest {
 
         // 2. Teste de Data Válida (Mês com 30 dias)
         try {
-            Date data30Dias = new Date(30, 4, 2024); // Abril tem 30 dias
+            Date data30Dias = new Date(30, 4, 2024);
             System.out.print("Teste 2 (Abril 30 dias): ");
             data30Dias.displayDate();
         } catch (IllegalArgumentException e) {
             System.out.println("Erro inesperado no Teste 2: " + e.getMessage());
         }
 
-        // 3. Teste de Erro: Abril com 31 dias (Deve disparar exceção)
+        // 3. Teste de Erro: Abril com 31 dias
         try {
             System.out.print("Teste 3 (Tentando Abril com 31): ");
             Date dataInvalida = new Date(31, 4, 2024);
@@ -29,7 +29,7 @@ public class DateTest {
             System.out.println("O sistema impediu a data, pois " + e.getMessage());
         }
 
-        // 4. Teste de Erro: Fevereiro com 30 dias (Deve disparar exceção)
+        // 4. Teste de Erro: Fevereiro com 30 dias
         try {
             System.out.print("Teste 4 (Tentando Fevereiro com 30): ");
             Date fevInvalido = new Date(30, 2, 2024);

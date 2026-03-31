@@ -59,7 +59,7 @@ public class Date {
 
     // Método para exibir a data formatada
     public void displayDate() {
-        // %02d garante que números menores que 10 tenham um zero à esquerda (ex:
+        // %02d garante que números menores que 10 tenham um zero à esquerda
         System.out.printf("%02d/%02d/%d%n", day, month, year);
     }
 }
